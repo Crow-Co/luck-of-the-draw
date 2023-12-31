@@ -11,7 +11,7 @@ public class MajorArcanaItem extends Item {
         super(settings.maxCount(1));
     }
 
-    // Cooldown bar color
+    // Cool down bar color
     @Override
     public int getItemBarColor(ItemStack stack) {
         return MathHelper.hsvToRgb(0.5f, 1.0F, 1.0F);
