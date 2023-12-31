@@ -9,9 +9,10 @@ import java.util.List;
 
 public class TheEmperorItem extends MajorArcanaItem {
     // Item Settings
-    public TheEmperorItem(Settings MajorArcanaItem) {
-        super(MajorArcanaItem);
+    public TheEmperorItem(Settings majorArcanaItem) {
+        super(majorArcanaItem,120f);
     }
+
 
     // The Tooltip
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {

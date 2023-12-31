@@ -6,6 +6,8 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Luck_of_the_Draw.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Luck_of_the_Draw.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Test_Mod.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Test_Mod.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Test_Mod.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Test_Mod.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/luck-of-the-draw.main.iml" filepath="$PROJECT_DIR$/.idea/modules/luck-of-the-draw.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/luck-of-the-draw.test.iml" filepath="$PROJECT_DIR$/.idea/modules/luck-of-the-draw.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/net.fabricmc.Test_Mod.main.iml" filepath="$PROJECT_DIR$/.idea/modules/net.fabricmc.Test_Mod.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/net.fabricmc.Test_Mod.test.iml" filepath="$PROJECT_DIR$/.idea/modules/net.fabricmc.Test_Mod.test.iml" />
     </modules>

@@ -10,8 +10,8 @@ import java.util.List;
 
 
 public class TheFoolItem extends MajorArcanaItem {
-    public TheFoolItem(Settings settings) {
-        super(settings);
+    public TheFoolItem(Settings majorArcanaItem) {
+        super(majorArcanaItem,120f);
     }
     // Item Settings
 
