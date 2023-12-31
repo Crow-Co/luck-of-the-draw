@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Luck_of_the_Draw.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Luck_of_the_Draw.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Luck_of_the_Draw.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Luck_of_the_Draw.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Test_Mod.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Test_Mod.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Test_Mod.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Test_Mod.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/net.fabricmc.Test_Mod.main.iml" filepath="$PROJECT_DIR$/.idea/modules/net.fabricmc.Test_Mod.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/net.fabricmc.Test_Mod.test.iml" filepath="$PROJECT_DIR$/.idea/modules/net.fabricmc.Test_Mod.test.iml" />
+    </modules>
+  </component>
+</project>

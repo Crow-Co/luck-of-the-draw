@@ -1,0 +1,26 @@
+{
+  "item.luck_of_the_draw.tarot_card.interact_fail": "This card doesn't seem ready yet.",
+
+  "item.luck_of_the_draw.misc.scream": "§2<shake>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA<shake>",
+
+  "item.luck_of_the_draw.the_fool_tarot_card": "The Fool",
+  "item.luck_of_the_draw.the_fool_tarot_card.tooltip_type": "§7#0 of the §dMajor Arcana§7, §fT1",
+  "item.luck_of_the_draw.the_fool_tarot_card.tooltip_description": "§7The start of your journey. §8<wave>it seems to do nothing...<wave>",
+
+  "item.luck_of_the_draw.the_magician_tarot_card": "The Magician",
+  "item.luck_of_the_draw.the_magician_tarot_card.tooltip_line1": "§7#1 of the §dMajor Arcana§7, §fT1",
+  "item.luck_of_the_draw.the_magician_tarot_card.tooltip_line2": "Boosts the effects of Minor Arcana for a limited time.",
+  "item.luck_of_the_draw.the_magician_tarot_card.tooltip_boosted": "Boosted effects:",
+
+  "item.luck_of_the_draw.the_high_priestess_tarot_card": "The High Priestess",
+  "item.luck_of_the_draw.the_high_priestess_tarot_card.tooltip_line1": "§7#2 of the §dMajor Arcana§7, §fT1§7-§aT2",
+  "item.luck_of_the_draw.the_high_priestess_tarot_card.tooltip_line2": "§cWIP",
+
+  "item.luck_of_the_draw.the_empress_tarot_card": "The Empress",
+  "item.luck_of_the_draw.the_empress_tarot_card.tooltip_line1": "§7#3 of the §dMajor Arcana§7, §aT2",
+  "item.luck_of_the_draw.the_empress_tarot_card.tooltip_line2": "§cWIP",
+
+  "item.luck_of_the_draw.the_emperor_tarot_card": "The Emperor",
+  "item.luck_of_the_draw.the_emperor_tarot_card.tooltip_line1": "§7#4 of the §dMajor Arcana§7, §aT2",
+  "item.luck_of_the_draw.the_emperor_tarot_card.tooltip_line2": "§cWIP"
+}

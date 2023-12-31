@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "test_mod",
+  "version": "${version}",
+  "name": "Test Mod",
+  "description": "",
+  "authors": [
+    "Chox Raven",
+    "Zeraphynx"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/testmod/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "net.fabricmc.luckofthedraw.client.LuckOfTheDrawClient"
+    ],
+    "main": [
+      "net.fabricmc.luckofthedraw.LuckOfTheDraw"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
