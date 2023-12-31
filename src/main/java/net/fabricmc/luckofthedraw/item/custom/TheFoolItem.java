@@ -7,14 +7,10 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-
-
 public class TheFoolItem extends MajorArcanaItem {
     public TheFoolItem(Settings majorArcanaItem) {
-        super(majorArcanaItem,120f);
+        super(majorArcanaItem,0);
     }
-    // Item Settings
-
 
     // The Tooltip
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {

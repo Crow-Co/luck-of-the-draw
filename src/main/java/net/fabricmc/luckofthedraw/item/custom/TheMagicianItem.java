@@ -9,8 +9,8 @@ import java.util.List;
 
 public class TheMagicianItem extends MajorArcanaItem {
     // Item Settings
-    public TheMagicianItem(Settings majorArcanaItem) {
-        super(majorArcanaItem,120f);
+    public TheMagicianItem(Settings MajorArcanaItem) {
+        super(MajorArcanaItem, 0);
     }
 
     // The Tooltip
