@@ -1,9 +1,4 @@
 # Project exclude paths
 /.gradle/
 /build/
-/run/.fabric
-/run/options.txt
-/run/saves
-/run/logs
-/run/config
-/run/.fabric/processedMods
+/run/
