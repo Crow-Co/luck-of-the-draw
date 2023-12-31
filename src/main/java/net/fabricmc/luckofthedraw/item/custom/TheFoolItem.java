@@ -1,7 +1,6 @@
 package net.fabricmc.luckofthedraw.item.custom;
 
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.world.World;
@@ -10,12 +9,10 @@ import java.util.List;
 
 
 
-public class TheFoolItem extends Item {
+public class TheFoolItem extends MajorArcanaItem {
     // Item Settings
-    public TheFoolItem (Settings settings) {
-        super(settings
-            .maxCount(1)
-        );
+    public TheFoolItem (Settings MajorArcanaItem) {
+        super(MajorArcanaItem);
     }
 
     // The Tooltip

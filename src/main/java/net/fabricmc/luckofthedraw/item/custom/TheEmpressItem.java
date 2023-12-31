@@ -10,8 +10,8 @@ import java.util.List;
 
 public class TheEmpressItem extends Item {
     // Item Settings
-    public TheEmpressItem(Settings settings) {
-        super(settings.maxCount(1));
+    public TheEmpressItem(Settings MajorArcanaItem) {
+        super(MajorArcanaItem);
     }
 
     // The Tooltip

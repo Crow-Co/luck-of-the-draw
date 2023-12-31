@@ -8,12 +8,11 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public class TheHighPriestessItem extends Item {
+public class TheHighPriestessItem extends MajorArcanaItem {
     // Item Settings
-    public TheHighPriestessItem(Settings settings) {
-        super(settings.maxCount(1));
+    public TheHighPriestessItem(Settings MajorArcanaItem) {
+        super(MajorArcanaItem);
     }
-
     // The Tooltip
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
         tooltip.add(Text.translatable("item.luck_of_the_draw.the_high_priestess_tarot_card.tooltip_line1"));

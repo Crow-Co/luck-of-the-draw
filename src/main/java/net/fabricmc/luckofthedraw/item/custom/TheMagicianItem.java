@@ -8,10 +8,10 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public class TheMagicianItem extends Item {
+public class TheMagicianItem extends MajorArcanaItem {
     // Item Settings
-    public TheMagicianItem(Settings settings) {
-        super(settings.maxCount(1));
+    public TheMagicianItem(Settings MajorArcanaItem) {
+        super(MajorArcanaItem);
     }
 
     // The Tooltip
