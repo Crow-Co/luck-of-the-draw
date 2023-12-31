@@ -4,6 +4,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.MathHelper;
 
+
 public class MajorArcanaItem extends Item {
     // Base settings
     public MajorArcanaItem(Settings settings) {

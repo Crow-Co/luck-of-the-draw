@@ -10,10 +10,11 @@ import java.util.List;
 
 
 public class TheFoolItem extends MajorArcanaItem {
-    // Item Settings
-    public TheFoolItem (Settings MajorArcanaItem) {
-        super(MajorArcanaItem);
+    public TheFoolItem(Settings settings) {
+        super(settings);
     }
+    // Item Settings
+
 
     // The Tooltip
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
