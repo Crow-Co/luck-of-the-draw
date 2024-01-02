@@ -13,6 +13,9 @@
   "icon": "assets/testmod/icon.png",
   "environment": "*",
   "entrypoints": {
+    "fabric-datagen": [
+      "net.fabricmc.luckofthedraw.datagen.LuckOfTheDrawDataGenerator"
+    ],
     "client": [
       "net.fabricmc.luckofthedraw.client.LuckOfTheDrawClient"
     ],
