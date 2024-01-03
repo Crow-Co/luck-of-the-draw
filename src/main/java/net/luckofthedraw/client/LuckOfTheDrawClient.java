@@ -1,4 +1,4 @@
-package net.fabricmc.luckofthedraw.client;
+package net.luckofthedraw.client;
 
 import net.fabricmc.api.ClientModInitializer;
 

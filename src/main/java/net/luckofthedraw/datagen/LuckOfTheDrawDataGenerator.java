@@ -1,4 +1,4 @@
-package net.fabricmc.luckofthedraw.datagen;
+package net.luckofthedraw.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
@@ -40,7 +40,7 @@ public class LuckOfTheDrawDataGenerator implements DataGeneratorEntrypoint {
                 )
                     // The first string used in criterion is the name referenced by other advancements when they want to have 'requirements'
                     .criterion("got_dirt", InventoryChangedCriterion.Conditions.items(Items.DIRT))
-                    .build(consumer, "luck_of_the_draw" + "/root");
+                    .build(consumer, "luckofthedraw" + "/root");
         }
     }
 }

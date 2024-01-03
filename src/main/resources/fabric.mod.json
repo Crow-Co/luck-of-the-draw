@@ -10,17 +10,17 @@
   ],
   "contact": {},
   "license": "MIT",
-  "icon": "assets/testmod/icon.png",
+  "icon": "assets/luck_of_the_draw/icon.png",
   "environment": "*",
   "entrypoints": {
     "fabric-datagen": [
-      "net.fabricmc.luckofthedraw.datagen.LuckOfTheDrawDataGenerator"
+      "net.luckofthedraw.datagen.LuckOfTheDrawDataGenerator"
     ],
     "client": [
-      "net.fabricmc.luckofthedraw.client.LuckOfTheDrawClient"
+      "net.luckofthedraw.client.LuckOfTheDrawClient"
     ],
     "main": [
-      "net.fabricmc.luckofthedraw.LuckOfTheDraw"
+      "net.luckofthedraw.LuckOfTheDraw"
     ]
   },
   "depends": {

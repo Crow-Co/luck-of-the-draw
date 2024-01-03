@@ -1,7 +1,7 @@
-package net.fabricmc.luckofthedraw;
+package net.luckofthedraw;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.luckofthedraw.item.ModItems;
+import net.luckofthedraw.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

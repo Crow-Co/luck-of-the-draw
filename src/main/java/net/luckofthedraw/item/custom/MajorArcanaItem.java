@@ -1,4 +1,4 @@
-package net.fabricmc.luckofthedraw.item.custom;
+package net.luckofthedraw.item.custom;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
