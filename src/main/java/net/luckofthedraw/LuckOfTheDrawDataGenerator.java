@@ -1,4 +1,4 @@
-package net.luckofthedraw.datagen;
+package net.luckofthedraw;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;

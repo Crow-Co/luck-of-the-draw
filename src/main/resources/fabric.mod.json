@@ -14,10 +14,10 @@
   "environment": "*",
   "entrypoints": {
     "fabric-datagen": [
-      "net.luckofthedraw.datagen.LuckOfTheDrawDataGenerator"
+      "net.luckofthedraw.LuckOfTheDrawDataGenerator"
     ],
     "client": [
-      "net.luckofthedraw.client.LuckOfTheDrawClient"
+      "net.luckofthedraw.LuckOfTheDrawClient"
     ],
     "main": [
       "net.luckofthedraw.LuckOfTheDraw"
