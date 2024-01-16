@@ -31,14 +31,11 @@ public abstract class MajorArcanaItem extends Item {
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         if (stack.getItem() instanceof MajorArcanaItem) {
+            if (stack.getMaxDamage()==0)return;
             if (stack.getDamage() < stack.getMaxDamage()) {
                 stack.setDamage(stack.getDamage() - 1);
             }
         }
     }
-
-    @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        return super.use(world, user, hand);
-    }
+    public abstract TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand);
 }
