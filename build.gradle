@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.2-SNAPSHOT'
+    id 'fabric-loom' version '1.5-SNAPSHOT'
     id 'maven-publish'
 }
 
@@ -14,6 +14,21 @@ repositories {
     // for more information about repositories.
 }
 
+loom {
+    splitEnvironmentSourceSets()
+
+	mods {
+		"luck_of_the_draw" {
+			sourceSet sourceSets.main
+			sourceSet sourceSets.client
+		}
+	}
+}
+
+fabricApi {
+    configureDataGeneration()
+}
+
 dependencies {
     // To change the versions see the gradle.properties file
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
@@ -22,6 +37,11 @@ dependencies {
 
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+    // Uncomment the following line to enable the deprecated Fabric API modules.
+    // These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.
+
+    // modImplementation "net.fabricmc.fabric-api:fabric-api-deprecated:${project.fabric_version}"
 }
 
 processResources {
@@ -59,12 +79,18 @@ java {
     // if it is present.
     // If you remove this line, sources will not be generated.
     withSourcesJar()
+
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
 jar {
     from("LICENSE") {
         rename { "${it}_${project.archivesBaseName}"}
     }
+
+    //last ditch attempt at fixing this weird problem
+    tasks.withType(Copy).configureEach { duplicatesStrategy 'exclude' }
 }
 
 // configure the maven publication
@@ -81,21 +107,6 @@ publishing {
         // Notice: This block does NOT have the same function as the block in the top level.
         // The repositories here will be used for publishing your artifact, not for
         // retrieving dependencies.
-    }
-}
-
-loom {
-    runs {
-        // This adds a new gradle task that runs the datagen API: "gradlew runDatagen"
-        datagen {
-            inherit server
-            name "Data Generation"
-            vmArg "-Dfabric-api.datagen"
-            vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
-            vmArg "-Dfabric-api.datagen.modid=${modid}"
-
-            runDir "build/datagen"
-        }
     }
 }
 
