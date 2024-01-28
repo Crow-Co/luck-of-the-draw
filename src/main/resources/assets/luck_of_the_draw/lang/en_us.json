@@ -1,7 +1,7 @@
 {
   "item.luck_of_the_draw.tarot_card.interact_fail": "This card doesn't seem ready yet.",
 
-  "item.luck_of_the_draw.misc.scream": "§c<shake>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA<shake>",
+  "item.luck_of_the_draw.misc.test": "§c<shake>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA<shake>",
 
   "item.luck_of_the_draw.the_fool_tarot_card": "The Fool",
   "item.luck_of_the_draw.the_fool_tarot_card.tooltip_type": "§7#0 of the §dMajor Arcana§7, §fT1",
@@ -22,5 +22,17 @@
 
   "item.luck_of_the_draw.the_emperor_tarot_card": "The Emperor",
   "item.luck_of_the_draw.the_emperor_tarot_card.tooltip_line1": "§7#4 of the §dMajor Arcana§7, §aT2",
-  "item.luck_of_the_draw.the_emperor_tarot_card.tooltip_line2": "<shake>§cWIP<shake>"
+  "item.luck_of_the_draw.the_emperor_tarot_card.tooltip_line2": "<shake>§cWIP<shake>",
+
+  "item.luck_of_the_draw.temperance_tarot_card": "Temperance",
+  "item.luck_of_the_draw.temperance_tarot_card.tooltip_line1": "§7#14 of the §dMajor Arcana§7, §aT2§7-§bT3",
+  "item.luck_of_the_draw.temperance_tarot_card.tooltip_line2": "<shake>§cWIP<shake>",
+
+  "item.luck_of_the_draw.judgement_tarot_card": "Judgement",
+  "item.luck_of_the_draw.judgement_tarot_card.tooltip_line1": "§7#30 of the §dMajor Arcana§7, §bT3§7-§dT4",
+  "item.luck_of_the_draw.judgement_tarot_card.tooltip_line2": "<shake>§cWIP<shake>",
+
+  "item.luck_of_the_draw.the_world_tarot_card": "The World",
+  "item.luck_of_the_draw.the_world_tarot_card.tooltip_line1": "§7#31 of the §dMajor Arcana§7, §dT4",
+  "item.luck_of_the_draw.the_world_tarot_card.tooltip_line2": "<shake>§cWIP<shake>"
 }

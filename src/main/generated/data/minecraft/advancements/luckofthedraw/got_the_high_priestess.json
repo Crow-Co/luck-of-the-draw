@@ -1,0 +1,38 @@
+{
+  "criteria": {
+    "got_the_high_priestess": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "luck_of_the_draw:the_empress_tarot_card"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": {
+      "text": "In the pursuit of bettering yourself you feel your knowledge growing."
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "luck_of_the_draw:the_high_priestess_tarot_card"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "The High Priestess"
+    }
+  },
+  "requirements": [
+    [
+      "got_the_high_priestess"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
