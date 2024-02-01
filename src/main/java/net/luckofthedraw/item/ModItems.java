@@ -17,7 +17,7 @@ public class ModItems {
         public static final Item THE_FOOL_TAROT_CARD = registerItem("the_fool_tarot_card",
             new TheFoolItem(new FabricItemSettings()));
 
-        // The Magician allows the player to equip up to 2 Royal cards from the same suit, but reduces the amount of slots to 3
+        // The Magician is WIP currently
         public static final Item THE_MAGICIAN_TAROT_CARD = registerItem("the_magician_tarot_card",
             new TheMagicianItem(new FabricItemSettings()));
 
