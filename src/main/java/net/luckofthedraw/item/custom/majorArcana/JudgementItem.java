@@ -1,5 +1,6 @@
-package net.luckofthedraw.item.custom;
+package net.luckofthedraw.item.custom.majorArcana;
 
+import net.luckofthedraw.item.custom.base.MajorArcanaItem;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;

@@ -1,4 +1,4 @@
-package net.luckofthedraw.item.custom;
+package net.luckofthedraw.item.custom.base;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
@@ -29,6 +29,7 @@ public abstract class MajorArcanaItem extends Item {
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         if (stack.getItem() instanceof MajorArcanaItem) {
             if (stack.getMaxDamage()==0)return;
+
             if (stack.getDamage() < stack.getMaxDamage()) {
                 stack.setDamage(stack.getDamage() - 1);
             }
