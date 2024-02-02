@@ -1,4 +1,4 @@
-package net.luckofthedraw.item.custom.majorArcana;
+package net.luckofthedraw.item.custom.majorArcana.tier2;
 
 import net.luckofthedraw.item.custom.base.MajorArcanaItem;
 import net.minecraft.client.item.TooltipContext;
@@ -8,15 +8,15 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public class TheEmperorItem extends MajorArcanaItem {
+public class StrengthItem extends MajorArcanaItem {
     // Item Settings
-    public TheEmperorItem(Settings majorArcanaItem) {
+    public StrengthItem(Settings majorArcanaItem) {
         super(majorArcanaItem,0);
     }
 
     // The Tooltip
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
-        tooltip.add(Text.translatable("item.luck_of_the_draw.the_emperor_tarot_card.tooltip_line1"));
-        tooltip.add(Text.translatable("item.luck_of_the_draw.the_emperor_tarot_card.tooltip_line2"));
+        tooltip.add(Text.translatable("item.luck_of_the_draw.strength_tarot_card.tooltip_line1"));
+        tooltip.add(Text.translatable("item.luck_of_the_draw.strength_tarot_card.tooltip_line2"));
     }
 }

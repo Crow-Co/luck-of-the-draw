@@ -28,11 +28,11 @@ public class LuckOfTheDrawDataGenerator implements DataGeneratorEntrypoint {
 
         @Override
         public void generateAdvancement(Consumer<Advancement> consumer) {
-            Advancement got_the_high_priestess = Advancement.Builder.create()
+            Advancement got_the_fool = Advancement.Builder.create()
                     .display(
                             ModItems.THE_HIGH_PRIESTESS_TAROT_CARD, // The display icon
-                            Text.literal("The High Priestess"), // The title
-                            Text.literal("In the pursuit of bettering yourself you feel your knowledge growing."), // The description
+                            Text.literal("The Fool"), // The title
+                            Text.literal("A simple card with no perceivable function, and yet it feels more meaningful than the other junk you found."), // The description
                             new Identifier("textures/gui/advancements/backgrounds/adventure.png"), // Background image used
                             AdvancementFrame.TASK, // Options: TASK, CHALLENGE, GOAL
                             true, // Show toast top right
@@ -40,6 +40,20 @@ public class LuckOfTheDrawDataGenerator implements DataGeneratorEntrypoint {
                             false // Hidden in the advancement tab
                     )
                     // The first string used in criterion is the name referenced by other advancements when they want to have 'requirements'
+                    .criterion("got_the_fool", InventoryChangedCriterion.Conditions.items(ModItems.THE_FOOL_TAROT_CARD))
+                    .build(consumer, "luckofthedraw" + "/got_the_fool");
+
+            Advancement got_the_high_priestess = Advancement.Builder.create().parent(got_the_fool)
+                    .display(
+                            ModItems.THE_HIGH_PRIESTESS_TAROT_CARD,
+                            Text.literal("The High Priestess"),
+                            Text.literal("In the pursuit of bettering yourself you feel your knowledge growing."),
+                            new Identifier("textures/gui/advancements/backgrounds/adventure.png"),
+                            AdvancementFrame.TASK,
+                            true,
+                            true,
+                            false
+                    )
                     .criterion("got_the_high_priestess", InventoryChangedCriterion.Conditions.items(ModItems.THE_EMPRESS_TAROT_CARD))
                     .build(consumer, "luckofthedraw" + "/got_the_high_priestess");
 

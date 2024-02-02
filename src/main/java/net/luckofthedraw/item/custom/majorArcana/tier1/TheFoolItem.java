@@ -1,4 +1,4 @@
-package net.luckofthedraw.item.custom.majorArcana;
+package net.luckofthedraw.item.custom.majorArcana.tier1;
 
 import net.luckofthedraw.item.custom.base.MajorArcanaItem;
 import net.minecraft.client.item.TooltipContext;
