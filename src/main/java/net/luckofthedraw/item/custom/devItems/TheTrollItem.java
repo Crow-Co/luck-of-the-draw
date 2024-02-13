@@ -1,4 +1,4 @@
-package net.luckofthedraw.item.custom.majorArcana.tier1;
+package net.luckofthedraw.item.custom.devItems;
 
 import net.luckofthedraw.item.custom.base.MajorArcanaItem;
 import net.minecraft.client.item.TooltipContext;
@@ -8,15 +8,14 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public class TheFoolItem extends MajorArcanaItem {
-    // Item Settings
-    public TheFoolItem(Settings majorArcanaItem) {
+public class TheTrollItem extends MajorArcanaItem {
+    public TheTrollItem(Settings majorArcanaItem) {
         super(majorArcanaItem,0);
     }
 
     // The Tooltip
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
-        tooltip.add(Text.translatable("item.luck_of_the_draw.the_fool_tarot_card.tooltip_line1"));
-        tooltip.add(Text.translatable("item.luck_of_the_draw.the_fool_tarot_card.tooltip_line2"));
+        tooltip.add(Text.translatable("item.luck_of_the_draw.the_troll_dev_tarot_card.tooltip_line1"));
+        tooltip.add(Text.translatable("item.luck_of_the_draw.the_troll_dev_tarot_card.tooltip_line2"));
     }
 }

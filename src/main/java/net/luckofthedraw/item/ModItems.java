@@ -8,6 +8,7 @@ import net.luckofthedraw.item.custom.majorArcana.tier1.*;
 import net.luckofthedraw.item.custom.majorArcana.tier2.*;
 //import net.luckofthedraw.item.custom.majorArcana.tier3.*;
 import net.luckofthedraw.item.custom.majorArcana.tier4.*;
+import net.luckofthedraw.item.custom.devItems.*;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
@@ -87,6 +88,11 @@ public class ModItems {
         public static final Item THE_WORLD_TAROT_CARD = registerItem("the_world_tarot_card",
             new TheWorldItem(new FabricItemSettings()));
 
+    // Dev Items lol
+        // The troll
+        public static final Item THE_TROLL_DEV_TAROT_CARD = registerItem("the_troll_dev_tarot_card",
+            new TheTrollItem(new FabricItemSettings()));
+
 
     // Methods to add items to item groups
     private static void addItemsToSearchTabItemGroup(FabricItemGroupEntries entries) {
@@ -107,6 +113,8 @@ public class ModItems {
         entries.add(DEATH_TAROT_CARD);
 
         entries.add(THE_WORLD_TAROT_CARD);
+
+        entries.add(THE_TROLL_DEV_TAROT_CARD);
     }
 
     // Helper method for registering items

@@ -8,14 +8,14 @@ import net.minecraft.world.World;
 
 public abstract class MajorArcanaItem extends Item {
     // Base settings
-    public MajorArcanaItem(Settings settings, int cooldownTime) {
-        super(settings
-           .maxCount(1));
+    public MajorArcanaItem(Settings settings, int cooldown) {
+        super(
+            settings.maxDamage(cooldown)
+        );
 
-           // Sets the durability to the cooldown time
-           if (cooldownTime > 0) {
-               settings.maxDamage(cooldownTime);
-           }
+        if (cooldown < 0) {
+            settings.maxCount(1);
+        }
     }
 
     // Cooldown bar color
@@ -24,15 +24,15 @@ public abstract class MajorArcanaItem extends Item {
         return MathHelper.hsvToRgb(0.5f, 1.0F, 1.0F);
     }
 
-    // The code for the Cooldown. NOTE: 1 tick = 1/20th of a second, this is running at 20 ticks per second
+    // The code for the cooldown. NOTE: 1 tick = 1/20th of a second, this 20 times per second
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
-        if (stack.getItem() instanceof MajorArcanaItem) {
-            if (stack.getMaxDamage()==0)return;
+        if (stack.getMaxDamage()==0) {
+            return;
+        }
 
-            if (stack.getDamage() < stack.getMaxDamage()) {
-                stack.setDamage(stack.getDamage() - 1);
-            }
+        if (stack.getDamage() > 0) {
+            stack.setDamage(stack.getDamage() - 1);
         }
     }
 }

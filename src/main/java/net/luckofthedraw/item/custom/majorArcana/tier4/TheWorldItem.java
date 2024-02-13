@@ -11,7 +11,7 @@ import java.util.List;
 public class TheWorldItem extends MajorArcanaItem {
     // Item Settings
     public TheWorldItem(Settings MajorArcanaItem) {
-        super(MajorArcanaItem, 0);
+        super(MajorArcanaItem,0);
     }
     // The Tooltip
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {

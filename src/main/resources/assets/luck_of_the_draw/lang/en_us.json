@@ -2,11 +2,17 @@
   "luck_of_the_draw.misc.test": "§c<shake>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA<shake>",
   "luck_of_the_draw.misc.wew": "<slow_wave>WEEEEEEEEEEEEEEEEEEEE<slow_wave>",
 
-  "item.luck_of_the_draw.tarot_card.interact_fail": "This card doesn't seem ready yet.",
+  "luck_of_the_draw.util.teleport_fail": "Player teleportation failed",
+
+  "item.luck_of_the_draw.tarot_card.interact_fail": "§cThis card <wiggle>doesn't seem ready for use yet<wiggle>.",
+
+  "item.luck_of_the_draw.the_troll_dev_tarot_card": "The Troll",
+  "item.luck_of_the_draw.the_troll_dev_tarot_card.tooltip_line1": "§7#§k0 §rof the §kMajor §rArcana§7, §fT§k1",
+  "item.luck_of_the_draw.the_troll_dev_tarot_card.tooltip_line2": "§c<wiggle>Why not try it out? Surely won't be that bad.<wiggle>",
 
   "item.luck_of_the_draw.the_fool_tarot_card": "The Fool",
-  "item.luck_of_the_draw.the_fool_tarot_card.tooltip_type": "§7#0 of the §dMajor Arcana§7, §fT1",
-  "item.luck_of_the_draw.the_fool_tarot_card.tooltip_description": "§7The start of your journey. §8<wave>it seems to do nothing...<wave>",
+  "item.luck_of_the_draw.the_fool_tarot_card.tooltip_line1": "§7#0 of the §dMajor Arcana§7, §fT1",
+  "item.luck_of_the_draw.the_fool_tarot_card.tooltip_line2": "§7The start of your journey. §8<wave>it seems to do nothing...<wave>",
 
   "item.luck_of_the_draw.the_magician_tarot_card": "The Magician",
   "item.luck_of_the_draw.the_magician_tarot_card.tooltip_line1": "§7#1 of the §dMajor Arcana§7, §fT1",
