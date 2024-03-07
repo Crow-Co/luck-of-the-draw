@@ -1,7 +1,7 @@
 package net.luckofthedraw.item.custom.majorArcana.tier2;
 
 import net.luckofthedraw.item.custom.base.MajorArcanaItem;
-import net.luckofthedraw.util.SpawnpointUtilities;
+import net.luckofthedraw.util.TeleportUtilities;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -16,7 +16,7 @@ import java.util.List;
 public class DeathItem extends MajorArcanaItem {
     // Item Settings
     public DeathItem(Settings majorArcanaItem) {
-        super(majorArcanaItem,600);
+        super(majorArcanaItem,2400);
     }
 
     // Teleports the user to their spawn point, and prints a death message in chat
@@ -32,9 +32,8 @@ public class DeathItem extends MajorArcanaItem {
         if (stack.getDamage() == 0) {
             stack.setDamage(stack.getMaxDamage());
 
-            // Teleports to their spawn point
             ServerPlayerEntity serverPlayerEntity = (ServerPlayerEntity) playerEntity;
-            SpawnpointUtilities.teleportToSpawn(serverPlayerEntity);
+            TeleportUtilities.teleportToSpawnpoint(serverPlayerEntity);
 
         // If the current durability is smaller than the max, send a cooldown message and stop usage for 5 ticks
         } else {

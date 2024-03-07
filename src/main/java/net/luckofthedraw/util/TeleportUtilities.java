@@ -10,6 +10,8 @@ import net.minecraft.network.packet.s2c.play.OverlayMessageS2CPacket;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
@@ -19,7 +21,7 @@ import net.minecraft.world.World;
 import java.util.Optional;
 
 // ALL the following code was used from Viniciuslth, see https://github.com/ViniciusIth/gohome-mod
-public class SpawnpointUtilities {
+public class TeleportUtilities {
     public static boolean isValidSpawnBlock(ServerPlayerEntity serverPlayerEntity) {
         ServerWorld targetWorld = serverPlayerEntity.server.getWorld(serverPlayerEntity.getSpawnPointDimension());
         BlockPos spawnpoint = serverPlayerEntity.getSpawnPointPosition();
@@ -90,20 +92,19 @@ public class SpawnpointUtilities {
     public static Vec3d getWorldSpawnPos(ServerPlayerEntity playerEntity) {
         ServerWorld overworld = playerEntity.getServer().getWorld(ServerWorld.OVERWORLD);
         BlockPos worldSpawn = overworld.getSpawnPos();
-        return new Vec3d(worldSpawn.getX(), worldSpawn.getY(), worldSpawn.getZ());
+        return new Vec3d(worldSpawn.getX()+0.5, worldSpawn.getY(), worldSpawn.getZ()+0.5);
     }
 
-    public static void teleportToSpawn(ServerPlayerEntity playerEntity) {
-        Optional<Vec3d> spawn = SpawnpointUtilities.getPlayerSpawn(playerEntity);
+    public static void teleportToSpawnpoint(ServerPlayerEntity playerEntity) {
+        Optional<Vec3d> spawn = TeleportUtilities.getPlayerSpawn(playerEntity);
         RegistryKey<World> spawnDimension = playerEntity.getSpawnPointDimension();
 
         playerEntity.stopRiding();
         playerEntity.fallDistance = 0;
 
         if (spawn.isEmpty()) {
-            Vec3d worldSpawn = SpawnpointUtilities.getWorldSpawnPos(playerEntity);
-
-            boolean teleportResult = SpawnpointUtilities.teleportPlayerTo(playerEntity, worldSpawn, ServerWorld.OVERWORLD);
+            Vec3d worldSpawn = TeleportUtilities.getWorldSpawnPos(playerEntity);
+            boolean teleportResult = TeleportUtilities.teleportPlayerTo(playerEntity, worldSpawn, ServerWorld.OVERWORLD);
 
             if (!teleportResult) {
                 playerEntity.networkHandler.sendPacket(new OverlayMessageS2CPacket(Text.translatable(
@@ -111,10 +112,32 @@ public class SpawnpointUtilities {
                 return;
             }
 
+            playerEntity.getWorld().playSound(
+                    null,
+                    worldSpawn.getX(),
+                    worldSpawn.getY(),
+                    worldSpawn.getZ(),
+                    SoundEvents.ITEM_CHORUS_FRUIT_TELEPORT,
+                    SoundCategory.PLAYERS,
+                    1f,
+                    1f
+            );
+
             playerEntity.networkHandler.sendPacket(new OverlayMessageS2CPacket(Text.translatable(
                     "block.minecraft.spawn.not_valid")));
         }
 
-        SpawnpointUtilities.teleportPlayerTo(playerEntity, spawn.get(), spawnDimension);
+
+        TeleportUtilities.teleportPlayerTo(playerEntity, spawn.get(), spawnDimension);
+        playerEntity.getWorld().playSound(
+                null,
+                spawn.get().getX(),
+                spawn.get().getY(),
+                spawn.get().getZ(),
+                SoundEvents.ITEM_CHORUS_FRUIT_TELEPORT,
+                SoundCategory.PLAYERS,
+                1f,
+                1f
+        );
     }
 }
