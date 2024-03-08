@@ -50,7 +50,7 @@ public class ModItems {
         public static final Item THE_CHARIOT_TAROT_CARD = registerItem("the_chariot_tarot_card",
             new TheChariotItem(new FabricItemSettings()));
 
-        // Strength grants a temporary resistance boost for a limited time
+        // Strength grants a temporary resistance boost to the user
         public static final Item STRENGTH_TAROT_CARD = registerItem("strength_tarot_card",
             new StrengthItem(new FabricItemSettings()));
 
