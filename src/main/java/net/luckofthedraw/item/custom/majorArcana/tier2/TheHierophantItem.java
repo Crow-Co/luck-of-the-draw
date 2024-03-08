@@ -26,7 +26,7 @@ public class TheHierophantItem extends MajorArcanaItem {
             return TypedActionResult.pass(stack);
         }
 
-        // Teleports the player on the serverside, sends a message, and sets durability to 0
+        // Grants the player EXP
         if (stack.getDamage() == 0) {
             stack.setDamage(stack.getMaxDamage());
 
