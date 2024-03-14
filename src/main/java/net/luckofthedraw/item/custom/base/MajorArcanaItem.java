@@ -7,15 +7,18 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
 public abstract class MajorArcanaItem extends Item {
-    // Base settings
+    // Base settings IF NO cooldown is specified
+    public MajorArcanaItem(Settings settings) {
+        super(
+                settings.maxCount(1)
+        );
+    }
+
+    // Base settings IF A cooldown is specified
     public MajorArcanaItem(Settings settings, int cooldown) {
         super(
             settings.maxDamage(cooldown)
         );
-
-        if (cooldown < 0) {
-            settings.maxCount(1);
-        }
     }
 
     // Cooldown bar color
