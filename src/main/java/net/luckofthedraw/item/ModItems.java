@@ -38,7 +38,7 @@ public class ModItems {
         public static final Item THE_EMPEROR_TAROT_CARD = registerItem("the_emperor_tarot_card",
             new TheEmperorItem(new FabricItemSettings()));
 
-        // The Hierophant allows the user to store up to 50 levels of experience into the card
+        // The Hierophant grants the player EXP on use
         public static final Item THE_HIEROPHANT_TAROT_CARD = registerItem("the_hierophant_tarot_card",
             new TheHierophantItem(new FabricItemSettings()));
 
