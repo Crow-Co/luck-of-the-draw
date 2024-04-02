@@ -11,7 +11,7 @@ import java.util.List;
 public class JusticeItem extends MajorArcanaItem {
     // Item Settings
     public JusticeItem(Settings majorArcanaItem) {
-        super(majorArcanaItem,0);
+        super(majorArcanaItem);
     }
 
     // The Tooltip

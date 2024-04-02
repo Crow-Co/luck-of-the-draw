@@ -11,7 +11,7 @@ import java.util.List;
 public class TheLoversItem extends MajorArcanaItem {
     // Item Settings
     public TheLoversItem(Settings majorArcanaItem) {
-        super(majorArcanaItem,0);
+        super(majorArcanaItem);
     }
 
     // The Tooltip

@@ -11,7 +11,7 @@ import java.util.List;
 public class WheelOfFortuneItem extends MajorArcanaItem {
     // Item Settings
     public WheelOfFortuneItem(Settings majorArcanaItem) {
-        super(majorArcanaItem,0);
+        super(majorArcanaItem);
     }
 
     // The Tooltip

@@ -11,7 +11,7 @@ import java.util.List;
 public class TheHangedManItem extends MajorArcanaItem {
     // Item Settings
     public TheHangedManItem(Settings majorArcanaItem) {
-        super(majorArcanaItem,0);
+        super(majorArcanaItem);
     }
 
     // The Tooltip

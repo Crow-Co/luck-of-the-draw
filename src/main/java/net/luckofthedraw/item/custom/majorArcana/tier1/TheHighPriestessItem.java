@@ -11,7 +11,7 @@ import java.util.List;
 public class TheHighPriestessItem extends MajorArcanaItem {
     // Item Settings
     public TheHighPriestessItem(Settings MajorArcanaItem) {
-        super(MajorArcanaItem,0);
+        super(MajorArcanaItem);
     }
     // The Tooltip
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
