@@ -9,12 +9,12 @@ import net.minecraft.world.World;
 import java.util.List;
 
 public class WheelOfFortuneItem extends MajorArcanaItem {
-    // Item Settings
+    // * Item Settings
     public WheelOfFortuneItem(Settings majorArcanaItem) {
         super(majorArcanaItem);
     }
 
-    // The Tooltip
+    // * Item Tooltip
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
         tooltip.add(Text.translatable("item.luck_of_the_draw.wheel_of_fortune_tarot_card.tooltip_line1"));
         tooltip.add(Text.translatable("item.luck_of_the_draw.wheel_of_fortune_tarot_card.tooltip_line2"));

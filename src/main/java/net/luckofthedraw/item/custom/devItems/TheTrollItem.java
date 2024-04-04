@@ -9,11 +9,12 @@ import net.minecraft.world.World;
 import java.util.List;
 
 public class TheTrollItem extends MajorArcanaItem {
+    // * Item Settings
     public TheTrollItem(Settings majorArcanaItem) {
-        super(majorArcanaItem,0);
+        super(majorArcanaItem);
     }
 
-    // The Tooltip
+    // * Item Tooltip
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
         tooltip.add(Text.translatable("item.luck_of_the_draw.the_troll_dev_tarot_card.tooltip_line1"));
         tooltip.add(Text.translatable("item.luck_of_the_draw.the_troll_dev_tarot_card.tooltip_line2"));

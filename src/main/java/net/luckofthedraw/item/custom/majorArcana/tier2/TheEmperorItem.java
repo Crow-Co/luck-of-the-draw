@@ -9,12 +9,12 @@ import net.minecraft.world.World;
 import java.util.List;
 
 public class TheEmperorItem extends MajorArcanaItem {
-    // Item Settings
+    // * Item Settings
     public TheEmperorItem(Settings majorArcanaItem) {
         super(majorArcanaItem);
     }
 
-    // The Tooltip
+    // * Item Tooltip
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
         tooltip.add(Text.translatable("item.luck_of_the_draw.the_emperor_tarot_card.tooltip_line1"));
         tooltip.add(Text.translatable("item.luck_of_the_draw.the_emperor_tarot_card.tooltip_line2"));

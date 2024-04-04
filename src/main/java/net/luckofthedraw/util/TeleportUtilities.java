@@ -20,21 +20,21 @@ import net.minecraft.world.World;
 
 import java.util.Optional;
 
-// ALL the following code was used from Viniciuslth, see https://github.com/ViniciusIth/gohome-mod
+// * ALL the following code was used from Viniciuslth, see https://github.com/ViniciusIth/gohome-mod
 public class TeleportUtilities {
     public static boolean isValidSpawnBlock(ServerPlayerEntity serverPlayerEntity) {
         ServerWorld targetWorld = serverPlayerEntity.server.getWorld(serverPlayerEntity.getSpawnPointDimension());
         BlockPos spawnpoint = serverPlayerEntity.getSpawnPointPosition();
 
         if (spawnpoint == null) {
-            return false; // No spawn point set, consider it invalid
+            return false; // ! No spawn point set, consider it invalid
         }
 
         BlockState respawnBlockState = targetWorld.getBlockState(spawnpoint);
         Block respawnBlock = respawnBlockState.getBlock();
 
         if (respawnBlock instanceof RespawnAnchorBlock || respawnBlock instanceof BedBlock) {
-            return true; // Valid spawn blocks
+            return true; // ? Valid spawn blocks
         } else if (serverPlayerEntity.isSpawnForced()) {
             boolean footBlockClear = respawnBlock.canMobSpawnInside(respawnBlockState);
             boolean headBlockClear = targetWorld.getBlockState(spawnpoint.up()).getBlock().canMobSpawnInside(respawnBlockState);
@@ -42,7 +42,7 @@ public class TeleportUtilities {
             return footBlockClear && headBlockClear;
         }
 
-        return false; // Not a valid spawn block
+        return false; // ! Not a valid spawn block
     }
 
     public static Optional<Vec3d> getPlayerSpawn(ServerPlayerEntity serverPlayerEntity) {
