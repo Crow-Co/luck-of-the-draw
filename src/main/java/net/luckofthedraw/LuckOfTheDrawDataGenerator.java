@@ -30,16 +30,16 @@ public class LuckOfTheDrawDataGenerator implements DataGeneratorEntrypoint {
         public void generateAdvancement(Consumer<Advancement> consumer) {
             Advancement got_the_fool = Advancement.Builder.create()
                     .display(
-                            ModItems.THE_HIGH_PRIESTESS_TAROT_CARD, // The display icon
-                            Text.literal("The Fool"), // The title
+                            ModItems.THE_FOOL_TAROT_CARD, // ? The display icon
+                            Text.literal("The Fool"), // ? The title
                             Text.literal("A simple card with no perceivable function, and yet it feels more meaningful than the other junk you found."), // The description
-                            new Identifier("textures/gui/advancements/backgrounds/adventure.png"), // Background image used
-                            AdvancementFrame.TASK, // Options: TASK, CHALLENGE, GOAL
-                            true, // Show toast top right
-                            true, // Announce to chat
-                            false // Hidden in the advancement tab
+                            new Identifier("textures/gui/advancements/backgrounds/adventure.png"), // ? Background image used
+                            AdvancementFrame.TASK, // ? Options: TASK, CHALLENGE, GOAL
+                            true, // ? Show toast top right
+                            true, // ? Announce to chat
+                            false // ? Hidden in the advancement tab
                     )
-                    // The first string used in criterion is the name referenced by other advancements when they want to have 'requirements'
+                    // ? The first string used in criterion is the name referenced by other advancements when they want to have 'requirements'
                     .criterion("got_the_fool", InventoryChangedCriterion.Conditions.items(ModItems.THE_FOOL_TAROT_CARD))
                     .build(consumer, "luckofthedraw" + "/got_the_fool");
 
