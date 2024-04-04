@@ -4,7 +4,6 @@ import mod.chloeprime.aaaparticles.api.common.AAALevel;
 import mod.chloeprime.aaaparticles.api.common.ParticleEmitterInfo;
 import net.luckofthedraw.LuckOfTheDraw;
 import net.luckofthedraw.item.custom.base.MajorArcanaItem;
-import net.luckofthedraw.util.TeleportUtilities;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
