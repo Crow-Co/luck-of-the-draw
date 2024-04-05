@@ -12,6 +12,7 @@ public class LuckOfTheDraw implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        ModTextEffects.registerModTextEffects();
         ModItems.registerModItems();
     }
 }

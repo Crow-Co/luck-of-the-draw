@@ -1,7 +1,4 @@
 {
-  "luck_of_the_draw.misc.test": "§c<shake>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</shake>",
-  "luck_of_the_draw.misc.wew": "<slow_wave>WEEEEEEEEEEEEEEEEEEEE</slow_wave>",
-
   "luck_of_the_draw.util.teleport_fail": "Player teleportation failed",
 
   "item.luck_of_the_draw.tarot_card.interact_fail": "§cThis card doesn't seem ready for use yet.",
