@@ -14,6 +14,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
+import net.minecraft.util.math.MathConstants;
 
 import java.util.List;
 
@@ -27,7 +28,7 @@ public class TheChariotItem extends MajorArcanaItem {
     // * Item Interaction
     public TypedActionResult<ItemStack> use(World world, PlayerEntity playerEntity, Hand hand) {
         ItemStack stack = playerEntity.getStackInHand(hand);
-        float playerDirection = (playerEntity.getYaw() * -1) * (3.14f / 180);
+        float playerDirection = (playerEntity.getYaw() * -1) * (MathConstants.PI / 180);
 
         // ? Stops the interaction on the client
         if (world.isClient) {
