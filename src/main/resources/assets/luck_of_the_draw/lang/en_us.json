@@ -1,11 +1,11 @@
 {
-  "item.luck_of_the_draw.tarot_card.interact_fail": "This card doesn't seem ready yet.",
+  "luck_of_the_draw.util.teleport_fail": "Player teleportation failed",
 
-  "item.luck_of_the_draw.misc.scream": "§2<shake>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA<shake>",
+  "item.luck_of_the_draw.tarot_card.interact_fail": "§cThis card doesn't seem ready for use yet.",
 
   "item.luck_of_the_draw.the_fool_tarot_card": "The Fool",
-  "item.luck_of_the_draw.the_fool_tarot_card.tooltip_type": "§7#0 of the §dMajor Arcana§7, §fT1",
-  "item.luck_of_the_draw.the_fool_tarot_card.tooltip_description": "§7The start of your journey. §8<wave>it seems to do nothing...<wave>",
+  "item.luck_of_the_draw.the_fool_tarot_card.tooltip_line1": "§7#0 of the §dMajor Arcana§7, §fT1",
+  "item.luck_of_the_draw.the_fool_tarot_card.tooltip_line2": "§7The start of your journey. §8<wave>it seems to do nothing...</wave>",
 
   "item.luck_of_the_draw.the_magician_tarot_card": "The Magician",
   "item.luck_of_the_draw.the_magician_tarot_card.tooltip_line1": "§7#1 of the §dMajor Arcana§7, §fT1",
@@ -14,13 +14,65 @@
 
   "item.luck_of_the_draw.the_high_priestess_tarot_card": "The High Priestess",
   "item.luck_of_the_draw.the_high_priestess_tarot_card.tooltip_line1": "§7#2 of the §dMajor Arcana§7, §fT1§7-§aT2",
-  "item.luck_of_the_draw.the_high_priestess_tarot_card.tooltip_line2": "§cWIP",
+  "item.luck_of_the_draw.the_high_priestess_tarot_card.tooltip_line2": "<shake>§cWIP</shake>",
 
   "item.luck_of_the_draw.the_empress_tarot_card": "The Empress",
   "item.luck_of_the_draw.the_empress_tarot_card.tooltip_line1": "§7#3 of the §dMajor Arcana§7, §aT2",
-  "item.luck_of_the_draw.the_empress_tarot_card.tooltip_line2": "§cWIP",
+  "item.luck_of_the_draw.the_empress_tarot_card.tooltip_line2": "<shake>§cWIP</shake>",
 
   "item.luck_of_the_draw.the_emperor_tarot_card": "The Emperor",
   "item.luck_of_the_draw.the_emperor_tarot_card.tooltip_line1": "§7#4 of the §dMajor Arcana§7, §aT2",
-  "item.luck_of_the_draw.the_emperor_tarot_card.tooltip_line2": "§cWIP"
+  "item.luck_of_the_draw.the_emperor_tarot_card.tooltip_line2": "<shake>§cWIP</shake>",
+
+  "item.luck_of_the_draw.the_hierophant_tarot_card": "The Hierophant",
+  "item.luck_of_the_draw.the_hierophant_tarot_card.tooltip_line1": "§7#5 of the §dMajor Arcana§7, §aT2",
+  "item.luck_of_the_draw.the_hierophant_tarot_card.tooltip_line2": "<shake>§cWIP</shake>",
+
+  "item.luck_of_the_draw.the_lovers_tarot_card": "The Lovers",
+  "item.luck_of_the_draw.the_lovers_tarot_card.tooltip_line1": "§7#6 of the §dMajor Arcana§7, §aT2",
+  "item.luck_of_the_draw.the_lovers_tarot_card.tooltip_line2": "<shake>§cWIP</shake>",
+
+  "item.luck_of_the_draw.the_chariot_tarot_card": "The Chariot",
+  "item.luck_of_the_draw.the_chariot_tarot_card.tooltip_line1": "§7#7 of the §dMajor Arcana§7, §aT2",
+  "item.luck_of_the_draw.the_chariot_tarot_card.tooltip_line2": "<shake>§cWIP</shake>",
+
+  "item.luck_of_the_draw.strength_tarot_card": "Strength",
+  "item.luck_of_the_draw.strength_tarot_card.tooltip_line1": "§7#8 of the §dMajor Arcana§7, §aT2",
+  "item.luck_of_the_draw.strength_tarot_card.tooltip_line2": "<shake>§cWIP</shake>",
+
+  "item.luck_of_the_draw.the_hermit_tarot_card": "The Hermit",
+  "item.luck_of_the_draw.the_hermit_tarot_card.tooltip_line1": "§7#9 of the §dMajor Arcana§7, §aT2",
+  "item.luck_of_the_draw.the_hermit_tarot_card.tooltip_line2": "<shake>§cWIP</shake>",
+
+  "item.luck_of_the_draw.wheel_of_fortune_tarot_card": "Wheel of Fortune",
+  "item.luck_of_the_draw.wheel_of_fortune_tarot_card.tooltip_line1": "§7#10 of the §dMajor Arcana§7, §aT2",
+  "item.luck_of_the_draw.wheel_of_fortune_tarot_card.tooltip_line2": "<shake>§cWIP</shake>",
+
+  "item.luck_of_the_draw.justice_tarot_card": "Justice",
+  "item.luck_of_the_draw.justice_tarot_card.tooltip_line1": "§7#11 of the §dMajor Arcana§7, §aT2",
+  "item.luck_of_the_draw.justice_tarot_card.tooltip_line2": "<shake>§cWIP</shake>",
+
+  "item.luck_of_the_draw.the_hanged_man_tarot_card": "The Hanged Man",
+  "item.luck_of_the_draw.the_hanged_man_tarot_card.tooltip_line1": "§7#12 of the §dMajor Arcana§7, §aT2",
+  "item.luck_of_the_draw.the_hanged_man_tarot_card.tooltip_line2": "<shake>§cWIP</shake>",
+
+  "item.luck_of_the_draw.death_tarot_card": "Death",
+  "item.luck_of_the_draw.death_tarot_card.tooltip_line1": "§7#13 of the §dMajor Arcana§7, §aT2",
+  "item.luck_of_the_draw.death_tarot_card.tooltip_line2": "<shake>§cWIP</shake>",
+
+  "item.luck_of_the_draw.temperance_tarot_card": "Temperance",
+  "item.luck_of_the_draw.temperance_tarot_card.tooltip_line1": "§7#14 of the §dMajor Arcana§7, §aT2§7-§bT3",
+  "item.luck_of_the_draw.temperance_tarot_card.tooltip_line2": "<shake>§cWIP</shake>",
+
+  "item.luck_of_the_draw.judgement_tarot_card": "Judgement",
+  "item.luck_of_the_draw.judgement_tarot_card.tooltip_line1": "§7#20 of the §dMajor Arcana§7, §bT3§7-§dT4",
+  "item.luck_of_the_draw.judgement_tarot_card.tooltip_line2": "<shake>§cWIP</shake>",
+
+  "item.luck_of_the_draw.the_world_tarot_card": "The World",
+  "item.luck_of_the_draw.the_world_tarot_card.tooltip_line1": "§7#21 of the §dMajor Arcana§7, §dT4",
+  "item.luck_of_the_draw.the_world_tarot_card.tooltip_line2": "<shake>§cWIP</shake>",
+
+  "item.luck_of_the_draw.the_troll_dev_tarot_card": "The Troll",
+  "item.luck_of_the_draw.the_troll_dev_tarot_card.tooltip_line1": "§7#§k0 §rof the §kMajor §rArcana§7, §fT§k1",
+  "item.luck_of_the_draw.the_troll_dev_tarot_card.tooltip_line2": "§c<shake>Why not try it out? Surely won't be that bad.</shake>"
 }
