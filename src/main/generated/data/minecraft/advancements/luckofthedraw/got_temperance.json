@@ -1,0 +1,39 @@
+{
+  "parent": "minecraft:luckofthedraw/got_the_high_priestess",
+  "criteria": {
+    "got_temperance": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "luck_of_the_draw:temperance_tarot_card"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": {
+      "text": "By facing many challenges, you feel more free than ever before, overcoming anything that stands in your way."
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "luck_of_the_draw:temperance_tarot_card"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Temperance"
+    }
+  },
+  "requirements": [
+    [
+      "got_temperance"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

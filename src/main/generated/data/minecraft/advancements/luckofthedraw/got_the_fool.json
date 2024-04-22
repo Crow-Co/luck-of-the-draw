@@ -1,0 +1,38 @@
+{
+  "criteria": {
+    "got_the_fool": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "luck_of_the_draw:the_fool_tarot_card"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": {
+      "text": "A simple card with no perceivable function, and yet it feels more meaningful than the other junk you found."
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "luck_of_the_draw:the_fool_tarot_card"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "The Fool"
+    }
+  },
+  "requirements": [
+    [
+      "got_the_fool"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
