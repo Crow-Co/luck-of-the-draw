@@ -1,5 +1,8 @@
 {
   "luck_of_the_draw.util.teleport_fail": "Player teleportation failed",
+  "luck_of_the_draw.test.test": "<hologram>This showcases the hologram effect, do not pay attention to the contents.",
+
+  "itemGroup.luck_of_the_draw.major_arcana": "Major Arcana",
 
   "item.luck_of_the_draw.tarot_card.interact_fail": "§cThis card doesn't seem ready for use yet.",
 
