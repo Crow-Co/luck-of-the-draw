@@ -8,7 +8,7 @@ import net.minecraft.world.World;
 
 public abstract class MajorArcanaItem extends Item {
     // TODO: Rewrite this entire class to use an item tag instead of durability.
-    // TODO: Figure out how to make a custom bar in the GUI
+    // TODO: Figure out how to make a custom bar in the GUI, use isItemBarVisible and getItemBarStep?
 
     // ? Base settings IF NO cooldown is specified
     public MajorArcanaItem(Settings settings) {
@@ -30,7 +30,7 @@ public abstract class MajorArcanaItem extends Item {
         return MathHelper.hsvToRgb(0.5f, 1.0F, 1.0F);
     }
 
-    // * The code for the cooldown.
+    // * Cooldown
     // ! NOTE: 1 tick = 1/20th of a second, this running at 20 times per second
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {

@@ -10,6 +10,7 @@ public class LuckOfTheDraw implements ModInitializer {
     public static final String MOD_ID = "luck_of_the_draw";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
+    // * Mod Initializer
     @Override
     public void onInitialize() {
         ModTextEffects.registerModTextEffects();
