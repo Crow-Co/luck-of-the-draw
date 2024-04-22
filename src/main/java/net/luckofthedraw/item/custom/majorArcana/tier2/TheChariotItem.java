@@ -23,6 +23,7 @@ public class TheChariotItem extends MajorArcanaItem {
     public TheChariotItem(Settings majorArcanaItem) {
         super(majorArcanaItem,600);
     }
+
     private static final ParticleEmitterInfo SPEED = new ParticleEmitterInfo(new Identifier(LuckOfTheDraw.MOD_ID, "speed"));
 
     // * Item Interaction

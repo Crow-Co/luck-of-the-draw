@@ -1,5 +1,8 @@
 package net.luckofthedraw.item.custom.majorArcana.tier2;
 
+import mod.chloeprime.aaaparticles.api.common.AAALevel;
+import mod.chloeprime.aaaparticles.api.common.ParticleEmitterInfo;
+import net.luckofthedraw.LuckOfTheDraw;
 import net.luckofthedraw.item.custom.base.MajorArcanaItem;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -8,6 +11,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
@@ -18,6 +22,8 @@ public class StrengthItem extends MajorArcanaItem {
     public StrengthItem(Settings majorArcanaItem) {
         super(majorArcanaItem,800);
     }
+
+    private static final ParticleEmitterInfo RESISTANCE = new ParticleEmitterInfo(new Identifier(LuckOfTheDraw.MOD_ID, "resistance"));
 
     // * Item Interaction
     public TypedActionResult<ItemStack> use(World world, PlayerEntity playerEntity, Hand hand) {
@@ -30,10 +36,10 @@ public class StrengthItem extends MajorArcanaItem {
 
         // ? Grants the player Speed I for 100 ticks (5 secs)
         if (stack.getDamage() == 0) {
-            stack.setDamage(stack.getMaxDamage());
-
             playerEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 200, 0));
+            AAALevel.addParticle(world, false, RESISTANCE.clone().position(playerEntity.getX(), playerEntity.getY(), playerEntity.getZ()).scale(0.25f));
 
+            stack.setDamage(stack.getMaxDamage());
         // ! If the current durability is smaller than the max, send a cooldown message and stop usage for 5 ticks
         } else {
             playerEntity.getItemCooldownManager().set(this, 5);
