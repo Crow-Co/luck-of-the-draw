@@ -21,16 +21,14 @@ repositories {
 }
 
 dependencies {
-    // * To change the versions see the gradle.properties file
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-    // * Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-    modImplementation "maven.modrinth:aaa-particles:mIOu49Wn"
     modImplementation "maven.modrinth:architectury-api:WbL7MStR"
-    modImplementation "maven.modrinth:text-animator:MgV3Pniz"
+    modImplementation "maven.modrinth:aaa-particles:sxNfqC3E"
+    modImplementation "maven.modrinth:text-animator:YE2a2dE4"
 
     // ! Uncomment the following line to enable the deprecated Fabric API modules.
     // ! These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.
