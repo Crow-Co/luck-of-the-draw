@@ -30,7 +30,6 @@ public class ModItems {
             new TheMagicianItem(new FabricItemSettings()));
 
         // ? The High Priestess allows the player to craft and obtain tier 2 Major Arcana
-        // TODO
         public static final Item THE_HIGH_PRIESTESS_TAROT_CARD = registerItem("the_high_priestess_tarot_card",
             new TheHighPriestessItem(new FabricItemSettings()));
 
@@ -58,7 +57,6 @@ public class ModItems {
             new TheChariotItem(new FabricItemSettings()));
 
         // ? Strength grants a temporary resistance boost to the user
-        // TODO
         public static final Item STRENGTH_TAROT_CARD = registerItem("strength_tarot_card",
             new StrengthItem(new FabricItemSettings()));
 

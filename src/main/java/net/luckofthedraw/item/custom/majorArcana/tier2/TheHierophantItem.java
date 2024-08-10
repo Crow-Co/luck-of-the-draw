@@ -12,9 +12,18 @@ import net.minecraft.world.World;
 import java.util.List;
 
 public class TheHierophantItem extends MajorArcanaItem {
+    // * Helper methods
+    private float getCooldown(ItemStack stack) {
+        return stack.getOrCreateNbt().getFloat("cooldown");
+    }
+
+    private void setCooldown(ItemStack stack, float cooldown) {
+        stack.getOrCreateNbt().putFloat("cooldown", cooldown);
+    }
+
     // * Item Settings
     public TheHierophantItem(Settings MajorArcanaItem) {
-        super(MajorArcanaItem, 6000);
+        super(MajorArcanaItem, 40);
     }
 
     // * Item Interaction
@@ -27,12 +36,12 @@ public class TheHierophantItem extends MajorArcanaItem {
         }
 
         // ? Grants the player EXP
-        if (stack.getDamage() == 0) {
-            stack.setDamage(stack.getMaxDamage());
+        if (getCooldown(stack) == 0.0F) {
+            setCooldown(stack, getMaxCooldown());
 
             playerEntity.addExperience(50);
 
-        // ! If the current durability is smaller than the max, send a cooldown message and stop usage for 5 ticks
+        // ? If the current cooldown isn't over, send a cooldown message and stop usage for 5 ticks
         } else {
             playerEntity.getItemCooldownManager().set(this, 5);
             playerEntity.sendMessage(Text.translatable("item.luck_of_the_draw.tarot_card.interact_fail"), false);

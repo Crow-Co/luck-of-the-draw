@@ -34,9 +34,9 @@ public class StrengthItem extends MajorArcanaItem {
             return TypedActionResult.pass(stack);
         }
 
-        // ? Grants the player Speed I for 100 ticks (5 secs)
+        // ? Grants the player Resistance I for 100 ticks (5 secs)
         if (stack.getDamage() == 0) {
-            playerEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 200, 0));
+            playerEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 100, 0));
             AAALevel.addParticle(world, false, RESISTANCE.clone().position(playerEntity.getX(), playerEntity.getY(), playerEntity.getZ()).scale(0.25f));
 
             stack.setDamage(stack.getMaxDamage());
