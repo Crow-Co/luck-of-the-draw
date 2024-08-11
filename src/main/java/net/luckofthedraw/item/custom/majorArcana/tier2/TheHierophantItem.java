@@ -30,18 +30,18 @@ public class TheHierophantItem extends MajorArcanaItem {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity playerEntity, Hand hand) {
         ItemStack stack = playerEntity.getStackInHand(hand);
 
-        // ? Stops the interaction on the client
+        // ! Stops the interaction on the client
         if (world.isClient) {
             return TypedActionResult.pass(stack);
         }
 
-        // ? Grants the player EXP
+        // * Main interaction
         if (getCooldown(stack) == 0.0F) {
             setCooldown(stack, getMaxCooldown());
 
             playerEntity.addExperience(50);
 
-        // ? If the current cooldown isn't over, send a cooldown message and stop usage for 5 ticks
+        // * Cooldown handler
         } else {
             playerEntity.getItemCooldownManager().set(this, 5);
             playerEntity.sendMessage(Text.translatable("item.luck_of_the_draw.tarot_card.interact_fail"), false);

@@ -6,6 +6,7 @@ import net.luckofthedraw.LuckOfTheDraw;
 import net.luckofthedraw.item.custom.base.MajorArcanaItem;
 import net.luckofthedraw.util.TeleportUtilities;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -18,11 +19,49 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 import java.util.List;
+import java.util.Random;
 
 public class DeathItem extends MajorArcanaItem {
+    // * Helper methods
+    private static final Random RANDOM = new Random();
+
+    private float getCooldown(ItemStack stack) {
+        return stack.getOrCreateNbt().getFloat("cooldown");
+    }
+
+    private void setCooldown(ItemStack stack, float cooldown) {
+        stack.getOrCreateNbt().putFloat("cooldown", cooldown);
+    }
+
+    // * Get random death message
+    private static final List<String> DEATH_MESSAGES = List.of(
+        "%s experienced existential dread",
+        "%s shuffled off this mortal coil",
+        "%s's fortune ran out",
+        "%s faced their final destiny",
+        "%s's life was a game of chance",
+        "%s was doomed to die",
+        "%s died a horrible death",
+        "%s took a one-way trip to the afterlife",
+        "%s's soul was collected",
+        "%s met their untimely demise",
+        "%s's fate was sealed by the Death card",
+        "%s's life story reached its final chapter",
+        "%s answered Death's call",
+        "%s's time in this realm came to an end",
+        "%s embraced their mortality",
+        "%s's life flashed before their eyes"
+    );
+
+    private Text getRandomDeathMessage(String playerName) {
+        String randomMessage = DEATH_MESSAGES.get(RANDOM.nextInt(DEATH_MESSAGES.size()));
+        return Text.of(String.format(randomMessage, playerName));
+    }
+
+
     // * Item Settings
-    public DeathItem(Settings majorArcanaItem) {
-        super(majorArcanaItem,2400);
+    public DeathItem(Settings MajorArcanaItem) {
+        super(MajorArcanaItem,2400);
     }
     private static final ParticleEmitterInfo TELEPORT = new ParticleEmitterInfo(new Identifier(LuckOfTheDraw.MOD_ID, "teleport"));
 
@@ -30,22 +69,24 @@ public class DeathItem extends MajorArcanaItem {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity playerEntity, Hand hand) {
         ItemStack stack = playerEntity.getStackInHand(hand);
 
-        // ? Stops the interaction on the client
+        // ! Stops the interaction on the client
         if (world.isClient) {
             return TypedActionResult.pass(stack);
         }
 
-        // ? Teleports the player on the serverside, sends a message, and sets durability to 0
-        if (stack.getDamage() == 0) {
+        // * Main interaction
+        if (getCooldown(stack) == 0.0F) {
+            setCooldown(stack, getMaxCooldown());
+
             ServerPlayerEntity serverPlayerEntity = (ServerPlayerEntity) playerEntity;
             ServerWorld targetWorld = serverPlayerEntity.server.getWorld(serverPlayerEntity.getSpawnPointDimension());
 
+            Text deathMessage = getRandomDeathMessage(serverPlayerEntity.getName().getString());
+            serverPlayerEntity.server.getPlayerManager().broadcast(deathMessage, false);
+
             TeleportUtilities.teleportToSpawnpoint(serverPlayerEntity);
             AAALevel.addParticle(targetWorld, false, TELEPORT.clone().position(TeleportUtilities.getPlayerSpawn(serverPlayerEntity).get().getX(), TeleportUtilities.getPlayerSpawn(serverPlayerEntity).get().getY() + 0.01, TeleportUtilities.getPlayerSpawn(serverPlayerEntity).get().getZ()).scale(0.25f));
-
-            stack.setDamage(stack.getMaxDamage());
-
-        // ? If the current durability is smaller than the max, send a cooldown message and stop usage for 5 ticks
+        // * Cooldown handler
         } else {
             playerEntity.getItemCooldownManager().set(this, 5);
             playerEntity.sendMessage(Text.translatable("item.luck_of_the_draw.tarot_card.interact_fail"), false);
